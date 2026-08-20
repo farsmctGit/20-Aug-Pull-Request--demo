@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Get in touch with Contoso IT Solutions about your next technology project.">
-	<title>Contact | Contoso IT Solutions</title>
+	<meta name="description" content="Learn how Contoso IT Solutions brings clarity, care, and practical expertise to technology.">
+	<title>About Us | Contoso IT Solutions</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
 		* { box-sizing: border-box; }
 		body { margin: 0; background: var(--paper); color: var(--ink); font-family: "DM Sans", sans-serif; }
 		a { color: inherit; text-decoration: none; }
-		button, input, textarea { font: inherit; }
+		button { font: inherit; }
 		.page-shell { max-width: 1440px; margin: auto; overflow: hidden; }
 		.topbar { display: flex; justify-content: space-between; align-items: center; padding: 24px 6vw; border-bottom: 1px solid var(--line); }
 		.brand { display: flex; align-items: center; gap: 11px; font: 700 1.12rem "Space Grotesk", sans-serif; letter-spacing: -.04em; }
@@ -22,29 +22,32 @@
 		.nav a:hover { color: var(--teal); }
 		.nav-cta { background: var(--teal); color: #fff; border-radius: 100px; padding: 12px 20px; font-weight: 600; }
 		.menu-button { display: none; border: 0; background: transparent; font-size: 1.5rem; cursor: pointer; }
-		.contact-page { display: grid; grid-template-columns: .8fr 1.2fr; gap: 9vw; padding: 90px 10vw 115px; }
 		.eyebrow { display: flex; align-items: center; gap: 10px; color: var(--teal); text-transform: uppercase; letter-spacing: .12em; font-size: .72rem; font-weight: 700; }
 		.eyebrow::before { content: ""; width: 31px; height: 2px; background: var(--coral); }
 		h1, h2, h3 { margin: 0; font-family: "Space Grotesk", sans-serif; letter-spacing: -.065em; }
-		h1 { margin: 20px 0 24px; font-size: clamp(3.5rem, 6vw, 6.2rem); line-height: .94; font-weight: 600; }
+		h1 { max-width: 800px; margin: 20px 0 26px; font-size: clamp(3.5rem, 7vw, 7rem); line-height: .92; font-weight: 600; }
 		h1 em { color: var(--teal); font-style: normal; }
-		.intro { max-width: 360px; color: var(--muted); line-height: 1.7; }
-		.details { display: grid; gap: 25px; margin-top: 56px; }
-		.detail-label { display: block; color: var(--coral); font: 700 .7rem "Space Grotesk", sans-serif; letter-spacing: .1em; margin-bottom: 7px; }
-		.detail a, .detail p { margin: 0; color: var(--ink); font-size: .92rem; line-height: 1.55; }
-		.detail a:hover { color: var(--teal); }
-		.form-panel { padding: 42px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 16px 16px 0 var(--lime); }
-		.form-panel h2 { font-size: 2.1rem; margin-bottom: 30px; }
-		.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 18px; }
-		.field { display: grid; gap: 8px; }
-		.field.full { grid-column: 1 / -1; }
-		label { font-size: .78rem; font-weight: 700; color: #44544e; }
-		input, textarea { width: 100%; padding: 13px 0; border: 0; border-bottom: 1px solid #aebdb4; border-radius: 0; background: transparent; color: var(--ink); outline: none; }
-		textarea { min-height: 102px; resize: vertical; }
-		input:focus, textarea:focus { border-color: var(--teal); box-shadow: 0 1px 0 var(--teal); }
-		.submit-button { margin-top: 28px; border: 0; padding: 15px 22px; border-radius: 100px; background: var(--teal); color: #fff; font-weight: 700; cursor: pointer; }
-		.submit-button:hover { background: #124643; }
-		.form-status { min-height: 1.3em; margin: 17px 0 0; color: var(--teal); font-size: .82rem; }
+		.hero { padding: 91px 10vw 105px; border-bottom: 1px solid var(--line); }
+		.hero-copy { max-width: 595px; color: var(--muted); font-size: 1.08rem; line-height: 1.7; }
+		.story { display: grid; grid-template-columns: 1fr 1fr; gap: 10vw; padding: 105px 10vw 112px; align-items: center; }
+		.story-image { width: 100%; height: 475px; object-fit: cover; border-radius: 12px 150px 12px 12px; filter: saturate(.78); }
+		.story h2 { font-size: clamp(2.5rem, 4vw, 4.2rem); line-height: .97; margin: 19px 0 24px; }
+		.story h2 span { color: var(--teal); }
+		.story p { color: var(--muted); line-height: 1.7; font-size: .95rem; max-width: 430px; }
+		.values { padding: 85px 10vw 112px; background: #e9eee7; }
+		.values-head { display: flex; justify-content: space-between; align-items: end; margin-bottom: 49px; }
+		.values h2 { font-size: clamp(2.5rem, 4vw, 4.2rem); line-height: 1; }
+		.values-head p { max-width: 270px; color: var(--muted); line-height: 1.6; font-size: .9rem; margin: 0; }
+		.value-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #cbd7ca; }
+		.value { padding: 27px 26px 8px 0; border-bottom: 1px solid #cbd7ca; }
+		.value + .value { border-left: 1px solid #cbd7ca; padding-left: 26px; }
+		.value-number { color: var(--coral); font: 700 .82rem "Space Grotesk", sans-serif; }
+		.value h3 { margin: 37px 0 13px; font-size: 1.55rem; letter-spacing: -.045em; }
+		.value p { margin: 0; color: var(--muted); line-height: 1.6; font-size: .9rem; }
+		.cta { margin: 72px 6vw 77px; display: flex; justify-content: space-between; align-items: center; gap: 30px; padding: 57px 7%; background: var(--teal); color: #fff; border-radius: 12px; }
+		.cta h2 { max-width: 600px; font-size: clamp(2.3rem, 4vw, 4rem); line-height: 1; }
+		.cta h2 span { color: var(--lime); }
+		.cta-link { flex-shrink: 0; padding: 16px 23px; border-radius: 100px; background: var(--lime); color: var(--ink); font-size: .86rem; font-weight: 700; }
 		.footer { display: flex; justify-content: space-between; padding: 0 6vw 28px; color: var(--muted); font-size: .75rem; }
 		.footer .brand { color: var(--ink); font-size: .9rem; }
 		.support-tab { position: fixed; z-index: 10; right: 0; bottom: 28px; display: flex; align-items: center; gap: 10px; border: 0; padding: 14px 18px 14px 15px; border-radius: 8px 0 0 8px; background: var(--coral); color: #fff; font-size: .78rem; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px #17231f24; }
@@ -62,12 +65,18 @@
 			.nav { display: none; position: absolute; z-index: 5; top: 65px; left: 5vw; right: 5vw; flex-direction: column; align-items: flex-start; padding: 22px; background: var(--card); box-shadow: 0 12px 30px #17231f18; border: 1px solid var(--line); }
 			.nav.is-open { display: flex; }
 			.menu-button { display: block; }
-			.contact-page { grid-template-columns: 1fr; gap: 57px; padding: 58px 5vw 82px; }
+			.hero { padding: 58px 5vw 72px; }
 			h1 { font-size: clamp(3.5rem, 15vw, 5rem); }
-			.details { margin-top: 38px; }
-			.form-panel { padding: 29px 24px; box-shadow: 9px 9px 0 var(--lime); }
-			.form-grid { grid-template-columns: 1fr; }
-			.field.full { grid-column: auto; }
+			.story { grid-template-columns: 1fr; gap: 48px; padding: 74px 5vw 82px; }
+			.story-image { height: 360px; }
+			.values { padding: 70px 5vw 78px; }
+			.values-head { display: block; margin-bottom: 35px; }
+			.values-head p { margin-top: 20px; }
+			.value-grid { grid-template-columns: 1fr; }
+			.value, .value + .value { padding: 25px 0; border-left: 0; }
+			.value h3 { margin-top: 25px; }
+			.cta { display: block; margin: 0 5vw 57px; padding: 40px 30px; }
+			.cta-link { display: inline-block; margin-top: 29px; }
 			.footer { display: block; padding: 0 5vw 25px; }
 			.footer small { display: block; margin-top: 13px; }
 		}
@@ -80,39 +89,41 @@
 			<button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
 			<nav class="nav" aria-label="Main navigation">
 				<a href="index.html#services">What we do</a>
-				<a href="about.html">Our approach</a>
-				<a href="contact.html" aria-current="page">Contact</a>
-				<a class="nav-cta" href="mailto:hello@contosoit.com">Email us</a>
+				<a href="about.html" aria-current="page">Our approach</a>
+				<a href="contact.html">Contact</a>
+				<a class="nav-cta" href="mailto:hello@contosoit.com">Start a conversation</a>
 			</nav>
 		</header>
 
-		<main class="contact-page">
-			<section>
-				<div class="eyebrow">Let’s talk</div>
-				<h1>Bring us<br>your <em>big</em><br>ideas.</h1>
-				<p class="intro">Tell us where technology is getting in the way. We’ll help you find a clearer, more useful way forward.</p>
-				<div class="details">
-					<div class="detail"><span class="detail-label">EMAIL</span><a href="mailto:hello@contosoit.com">hello@contosoit.com</a></div>
-					<div class="detail"><span class="detail-label">CALL</span><a href="tel:+18005552678">+1 800 555 2678</a></div>
-					<div class="detail"><span class="detail-label">FIND US</span><p>100 Innovation Way<br>Redmond, WA 98052</p></div>
+		<main>
+			<section class="hero">
+				<div class="eyebrow">A little about us</div>
+				<h1>Technology<br>with <em>good</em><br>intentions.</h1>
+				<p class="hero-copy">Contoso IT Solutions is a team of practical thinkers, patient problem-solvers, and curious technologists helping people do their best work.</p>
+			</section>
+
+			<section class="story">
+				<img class="story-image" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1000&q=85" alt="Colleagues sharing ideas around a table">
+				<div>
+					<div class="eyebrow">Our point of view</div>
+					<h2>Less noise.<br><span>More progress.</span></h2>
+					<p>Good technology should make work feel clearer, not more complicated. We listen first, explain without jargon, and build systems that fit the way your people actually work.</p>
+					<p>That means thoughtful advice when you need direction, dependable infrastructure when you need momentum, and a real human when something goes sideways.</p>
 				</div>
 			</section>
 
-			<section class="form-panel" aria-labelledby="form-title">
-				<h2 id="form-title">Start a conversation.</h2>
-				<form id="contact-form">
-					<div class="form-grid">
-						<div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
-						<div class="field"><label for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
-						<div class="field"><label for="company">Company</label><input id="company" name="company" type="text" autocomplete="organization"></div>
-						<div class="field"><label for="topic">What can we help with?</label><input id="topic" name="topic" type="text"></div>
-						<div class="field full"><label for="message">A little more detail</label><textarea id="message" name="message" required></textarea></div>
-					</div>
-					<button class="submit-button" type="submit">Send your message &nbsp; ↗</button>
-					<p class="form-status" role="status" aria-live="polite"></p>
-				</form>
+			<section class="values">
+				<div class="values-head"><h2>How we<br>show up.</h2><p>Our principles keep every recommendation grounded in the people and purpose behind the technology.</p></div>
+				<div class="value-grid">
+					<article class="value"><span class="value-number">01 / LISTEN</span><h3>Start with people</h3><p>We learn your context before suggesting a solution, because the best system is one your team can truly use.</p></article>
+					<article class="value"><span class="value-number">02 / SIMPLIFY</span><h3>Make it make sense</h3><p>We turn technical decisions into clear choices, useful language, and a plan you can feel confident about.</p></article>
+					<article class="value"><span class="value-number">03 / STAY CLOSE</span><h3>Be there for the long run</h3><p>We build relationships that last beyond launch, with support that is responsive, personal, and proactive.</p></article>
+				</div>
 			</section>
+
+			<section class="cta"><h2>Let’s make<br>something <span>work.</span></h2><a class="cta-link" href="contact.html">Meet the team &nbsp; ↗</a></section>
 		</main>
+
 		<button class="support-tab" type="button" aria-expanded="false" aria-controls="support-panel"><span class="support-dot"></span> IT SUPPORT</button>
 		<aside class="support-panel" id="support-panel" aria-hidden="true" aria-labelledby="support-title">
 			<h2 id="support-title">Need a hand?</h2>
@@ -124,19 +135,12 @@
 	<script>
 		const menuButton = document.querySelector('.menu-button');
 		const navigation = document.querySelector('.nav');
-		const contactForm = document.querySelector('#contact-form');
-		const formStatus = document.querySelector('.form-status');
 		const supportTab = document.querySelector('.support-tab');
 		const supportPanel = document.querySelector('.support-panel');
 		menuButton.addEventListener('click', () => {
 			const isOpen = navigation.classList.toggle('is-open');
 			menuButton.setAttribute('aria-expanded', isOpen);
 			menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
-		});
-		contactForm.addEventListener('submit', (event) => {
-			event.preventDefault();
-			formStatus.textContent = 'Thanks. We’ll be in touch within one business day.';
-			contactForm.reset();
 		});
 		supportTab.addEventListener('click', () => {
 			const isOpen = supportPanel.classList.toggle('is-open');
