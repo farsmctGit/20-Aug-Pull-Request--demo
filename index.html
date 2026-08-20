@@ -73,6 +73,16 @@
 		.contact-button { flex-shrink: 0; padding: 16px 23px; border-radius: 100px; background: var(--lime); color: var(--ink); font-size: .86rem; font-weight: 700; }
 		.footer { display: flex; justify-content: space-between; padding: 0 6vw 28px; color: var(--muted); font-size: .75rem; }
 		.footer .brand { color: var(--ink); font-size: .9rem; }
+		.support-tab { position: fixed; z-index: 10; right: 0; bottom: 28px; display: flex; align-items: center; gap: 10px; border: 0; padding: 14px 18px 14px 15px; border-radius: 8px 0 0 8px; background: var(--coral); color: #fff; font-size: .78rem; font-weight: 700; cursor: pointer; box-shadow: 0 8px 20px #17231f24; }
+		.support-tab:hover { background: #d85e49; }
+		.support-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 4px #ffffff22; }
+		.support-panel { position: fixed; z-index: 9; right: 22px; bottom: 84px; width: min(340px, calc(100vw - 36px)); padding: 25px; background: var(--card); border: 1px solid var(--line); border-radius: 12px; box-shadow: 0 18px 45px #17231f26; opacity: 0; pointer-events: none; transform: translateY(12px); transition: opacity .2s ease, transform .2s ease; }
+		.support-panel.is-open { opacity: 1; pointer-events: auto; transform: translateY(0); }
+		.support-panel h2 { font-size: 1.55rem; margin-bottom: 8px; }
+		.support-panel p { margin: 0 0 20px; color: var(--muted); font-size: .85rem; line-height: 1.5; }
+		.support-actions { display: grid; gap: 9px; }
+		.support-actions a { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; border: 1px solid var(--line); border-radius: 7px; color: var(--teal); font-size: .8rem; font-weight: 700; }
+		.support-actions a:hover { border-color: var(--teal); background: #f3f8e8; }
 
 		@media (max-width: 760px) {
 			.topbar { padding: 18px 5vw; }
@@ -146,15 +156,28 @@
 				<a class="contact-button" href="contact.html">Start a conversation &nbsp; ↗</a>
 			</section>
 		</main>
+		<button class="support-tab" type="button" aria-expanded="false" aria-controls="support-panel"><span class="support-dot"></span> IT SUPPORT</button>
+		<aside class="support-panel" id="support-panel" aria-hidden="true" aria-labelledby="support-title">
+			<h2 id="support-title">Need a hand?</h2>
+			<p>Our support team is ready to get your people back on track.</p>
+			<div class="support-actions"><a href="mailto:support@contosoit.com">Email support <span>↗</span></a><a href="tel:+18005552678">Call +1 800 555 2678 <span>↗</span></a><a href="contact.html">Send a request <span>↗</span></a></div>
+		</aside>
 		<footer class="footer"><a class="brand" href="#top"><span class="brand-mark">C</span> CONTOSO IT</a><small>© 2026 Contoso IT Solutions. Thoughtful technology, thoughtfully delivered.</small></footer>
 	</div>
 	<script>
 		const menuButton = document.querySelector('.menu-button');
 		const navigation = document.querySelector('.nav');
+		const supportTab = document.querySelector('.support-tab');
+		const supportPanel = document.querySelector('.support-panel');
 		menuButton.addEventListener('click', () => {
 			const isOpen = navigation.classList.toggle('is-open');
 			menuButton.setAttribute('aria-expanded', isOpen);
 			menuButton.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+		});
+		supportTab.addEventListener('click', () => {
+			const isOpen = supportPanel.classList.toggle('is-open');
+			supportTab.setAttribute('aria-expanded', isOpen);
+			supportPanel.setAttribute('aria-hidden', !isOpen);
 		});
 	</script>
 </body>
